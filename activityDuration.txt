@@ -1,0 +1,3 @@
+Activitate: Leaving			Duratie: 1658
+Activitate: Sleeping		Duratie: 7856
+Activitate: Spare_Time/TV		Duratie: 8510
