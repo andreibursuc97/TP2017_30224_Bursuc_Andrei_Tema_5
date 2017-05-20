@@ -1,7 +1,5 @@
 import java.io.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -27,8 +25,6 @@ public class DataProcessing {
         LocalDateTime startTime,endTime;
 
         String activity;
-        LocalDate date;
-        LocalTime time;
         MonitoredData monitoredDataField;
         try {
             Scanner input=new Scanner(new File("D:\\Downloads Chrome\\TP2017_30224_Bursuc_Andrei_Tema_5\\src\\main\\java\\Activities.txt"));
@@ -42,23 +38,8 @@ public class DataProcessing {
                 activity=fields[2];
                 monitoredDataField=new MonitoredData(startTime,endTime,activity);
                 monitoredData.add(monitoredDataField);
-                //monitoredData.add(monitoredDataField);
 
-                //System.out.println(fields[0]+"\t\t"+fields[1]+"\t\t"+fields[2]);
             }
-            /*for(MonitoredData mmonData:monitoredData)
-            {
-                for (Map.Entry<LocalDate, ArrayList<LocalTime>> entry : mmonData.getStartTime().entrySet()) {
-                    for(LocalTime localTime:entry.getValue())
-                    {
-                        System.out.println(entry.getKey()+" "+localTime);
-                    }
-            }
-            }*/
-           /* for(MonitoredData monitoredDataField1:monitoredData)
-            {
-                System.out.println(monitoredDataField1.getStartTime()+"      "+monitoredDataField1.getEndTime()+"     "+monitoredDataField1.getActivityLabel());
-            }*/
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
